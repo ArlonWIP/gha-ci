@@ -12,7 +12,10 @@ RUN apt-get install -y \
     zip
 
 # Check and/or Install core modules
-RUN /opt/php-ext-check.sh bcmath ctype fileinfo json mbstring openssl pdo tokenizer xml zip mysqli curl mysql
+RUN /opt/php-ext-check.sh bcmath ctype fileinfo json mbstring openssl tokenizer xml zip curl
+
+# Install PHP Database Extensions
+RUN /opt/php-ext-check.sh mysql mysqli pdo_mysql pdo
 
 # Install Composer
 # e3e43bde99447de1c13da5d1027545be81736b27 = 04DEC2020
