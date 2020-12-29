@@ -1,5 +1,5 @@
 ARG VERSION
-FROM php:${VERSION}-fpm
+FROM php:${VERSION}-cli
 
 RUN apt update && apt upgrade -y && \
     apt install -y libxml2-dev wget
