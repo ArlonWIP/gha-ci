@@ -13,6 +13,7 @@ RUN /opt/php-ext-check.sh bcmath ctype \
 # Install Composer
 # e3e43bde99447de1c13da5d1027545be81736b27 = 04DEC2020
 RUN wget https://raw.githubusercontent.com/composer/getcomposer.org/e3e43bde99447de1c13da5d1027545be81736b27/web/installer -O - -q | php -- --quiet
+RUN mv composer.phar /usr/local/bin/composer
 
 # Install Xdebug
 RUN pecl install xdebug \
