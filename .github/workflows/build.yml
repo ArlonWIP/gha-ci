@@ -29,7 +29,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Information
-        run: echo "Building Images for PHP ${{ matrix.verison}}"
+        run: echo "Building Images for PHP ${{ matrix.version }}"
 
       - name: Build and push
         id: docker_build
@@ -65,7 +65,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Information
-        run: echo "Building Images for MySQL ${{ matrix.verison}}"
+        run: echo "Building Images for MySQL ${{ matrix.version }}"
 
       - name: Build and push
         uses: docker/build-push-action@v2
