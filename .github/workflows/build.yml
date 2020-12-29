@@ -37,4 +37,4 @@ jobs:
           file: ./Docker/Images/PHP/Dockerfile
           tags: arlonwip/php:${{ matrix.version }}
           build-args: |
-            version=${{ matrix.version }}
+            VERSION=${{ matrix.version }}
