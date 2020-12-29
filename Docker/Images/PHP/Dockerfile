@@ -5,7 +5,7 @@ RUN apt update && apt upgrade -y && \
     apt install -y libxml2-dev wget
 
 # Copy over our script to check if the extension is already installed
-COPY ./docker-php-ext-install-check.sh /opt/php-ext-check.sh
+COPY ./Docker/Images/PHP/docker-php-ext-install-check.sh /opt/php-ext-check.sh
 # Check and/or Install core modules
 RUN /opt/php-ext-check.sh bcmath ctype \
     fileinfo json mbstring openssl pdo tokenizer xml
