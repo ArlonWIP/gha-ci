@@ -35,7 +35,8 @@ jobs:
         with:
           push: true
           file: ./Docker/Images/PHP/Dockerfile
-          tags: arlonwip/php:${{ matrix.version }}
+          tags: |
+            arlonwip/php:${{ matrix.version }}
           build-args: |
             VERSION=${{ matrix.version }}
 
