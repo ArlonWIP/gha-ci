@@ -7,8 +7,16 @@ RUN apt update && apt upgrade -y && \
 # Copy over our script to check if the extension is already installed
 COPY ./Docker/Images/PHP/docker-php-ext-install-check.sh /opt/php-ext-check.sh
 # Check and/or Install core modules
-RUN /opt/php-ext-check.sh bcmath ctype \
-    fileinfo json mbstring openssl pdo tokenizer xml
+RUN /opt/php-ext-check.sh
+    bcmath \
+    ctype \
+    fileinfo \
+    json \
+    mbstring \
+    openssl \
+    pdo \
+    tokenizer \
+    xml
 
 # Install Composer
 # e3e43bde99447de1c13da5d1027545be81736b27 = 04DEC2020
