@@ -11,6 +11,9 @@ jobs:
     strategy:
       matrix:
         versions: [7.2, 7.3, 7.4, 8.0]
+        
+        
+    name: 'Docker PHP Release ${{ matrix.version }}'
 
     steps:
       -
@@ -32,6 +35,6 @@ jobs:
         with:
           push: true
           file: ./Docker/PHP/Dockerfile
-          tags: arlonwip/php:${{ matrix.service }}
+          tags: arlonwip/php:${{ matrix.version }}
           build-args: |
-            version=${{ matrix.service }}
+            version=${{ matrix.version }}
